@@ -1,0 +1,1495 @@
+@charset "utf-8";
+
+html , body {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+footer , header , nav , li , div , ul , body , h5, h1 , h2 , h3 , h6 , h4 {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+    font-family: "Abril Fatface" ;
+    src: local(Abril Fatface), url('Abril Fatface.ttf') format('opentype');
+}
+@font-face {
+    font-family: "six caps" ;
+    src: local(six caps), url('six caps.ttf') format('opentype');
+}
+@font-face {
+    font-family: "century gothic" ;
+    src: local(gothic), url('gothic.ttf') format('opentype');
+}
+@font-face {
+    font-family: "metropolis" ;
+    src: local(metropolis), url('metropolis.ttf') format('opentype');
+}
+
+.webcontainer {
+  background-image: url(pexels-photo-113338.jpg);
+  background-size: cover;
+  -ms-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  background-attachment: fixed;
+}
+
+.web {
+  width: auto;
+  background: rgba(4, 2, 0, 0.6);
+  min-height: 100vh;
+}
+
+#wrapper {
+  height: auto;
+  padding: 13px 150px;
+  box-sizing: border-box;
+  /*background: #252d20a8; */
+}
+
+#header {
+  font-family: "six caps", sans-serif;
+  font-size: 16px;
+  color: white;
+}
+#logopic{
+      text-align: center;
+      margin: 30px auto 0px auto;
+}
+
+#myname {
+  font-family: "Abril Fatface", sans-serif;
+  font-size: 70px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  margin: 0px auto;
+  margin-bottom: -30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 2s ease-in-out , margin 1s ease-in-out;
+}
+
+#myname.show {
+  opacity: 1;
+  margin-bottom: 0px;
+  margin-top: 50px;
+}
+
+hr {
+  width: 3%;
+}
+
+h3 {
+  font-family: "Abril Fatface", sans-serif;
+  font-size: 12px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  margin: 10px auto 0px auto;
+  font-weight: lighter;
+}
+
+#line{
+    border-bottom: 1px solid white;
+    width: 100px;
+    margin: 5px auto;
+}
+
+p {
+  font-family: "century gothic", sans-serif;
+  font-size: 12px;
+  color: #ccc;
+  text-align: center;
+  margin: 10px auto 0 auto;
+  width: 50%;
+  text-transform: capitalize;
+}
+
+#content2 {
+  width: auto;
+  height: 2px;
+  margin-top: 100px;
+  overflow-y: hidden;
+  transition: height 0.5s ease-in-out;
+  -ms-transition: height 0.5s ease-in-out;
+  -moz-transition: height 0.5s ease-in-out;
+  -webkit-transition: height 0.5s ease-in-out;
+}
+
+#content2.open {
+  height: 100px;
+}
+
+#button {
+  width: 100px;
+  height: auto;
+  display: block;
+  padding: 8px 0;
+  font-family: "century gothic", sans-serif;
+  font-size: 10px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  margin: 0 auto;
+  text-align: center;
+  border: 0.5px solid white;
+  border-radius: 2px;
+  transition: margin 0.5s ease-in-out 0s;
+}
+
+span {
+  color: #02c400;
+}
+
+#content3 {
+  padding: 0 20px;
+  position: fixed;
+  top: 65px;
+  left: -7%;
+  width: 10%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 2em;
+  transition: all 0.6s ease-in-out;
+}
+#content3.popup{
+     left: 0;
+     transition: all 0.6s ease-in-out;
+}
+
+.rates {
+  margin: 20px auto;
+  text-align: center;
+}
+#togglearrow{
+        padding-top: 15em;
+        padding-left: 2em;
+}
+#Tarrow{
+    width: 20px;
+    height: 20px;
+    box-shadow: 4px 4px 0 white;
+    transform: rotate(315deg);
+    cursor: pointer;
+    animation: indicate 0.5s ease-in-out 1s;
+    animation-iteration-count: 3;
+}
+
+@keyframes indicate {
+          0% 100%{
+               transform: translate(-75%) rotate(315deg);
+          }
+          50% {
+               transform: translate(-75%) rotate(315deg);
+          }
+          100%{
+                transform: translate(0) rotate(315deg);
+          }
+}
+h6 {
+  font-family: "century gothic", sans-serif;
+  font-size: 10px;
+  color: #d9d9d9;
+  font-weight: 300;
+}
+
+.lev {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-family: "metropolis", sans-serif;
+  font-size: 15px;
+  color: #02c400;
+  font-weight: 200;
+  margin: 5px auto;
+  box-sizing: border-box;
+  padding: 5px 0;
+  animation: flash 2s ease-in-out 1s infinite;
+}
+
+@keyframes flash {
+  0% , 100% {
+    transform: scale(0.3);
+    color: #999;
+  }
+
+  25% {
+    transform: scale(1);
+    color: #039402;
+  }
+
+  75% {
+    transform: scale(1);
+    color: #039402;
+  }
+}
+#mywork {
+  font-family: "Abril Fatface", sans-serif;
+  font-size: 20px;
+  color: #039402;
+  font-weight: 300;
+  text-align: center;
+  padding-top: 30px;
+  margin: 0 auto;
+
+}
+
+#tip {
+  font-family: "Abril Fatface", sans-serif;
+  font-size: 10px;
+  color: #999;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.content4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5em;
+  grid-row-gap: 1px;
+  padding: 50px 0 20px 0;
+  width: 70%;
+  margin: 0 auto;
+
+}
+
+.grid1 {
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+}
+.grid4 {
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.grid2 {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
+}
+.grid3 {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#screenpad{
+  width: 100%;
+  background-image: url(ice_screenshot_20190314-030744.jpg);
+  background-size: cover;
+  -ms-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100%;
+  transition: all 1s ease-in-out;
+}
+
+#screenpad a {
+  display: block;
+  padding: 99px 50px;
+}
+
+#screenpad:hover {
+  transform: scale(1.2);
+}
+
+#screenpad1 {
+  width: 100%;
+  background-image: url(ice_screenshot_20180324-010557.jpg);
+  background-size: cover;
+  -ms-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100%;
+  transition: all 1s ease-in-out;
+}
+
+#screenpad1 a {
+  display: block;
+  padding: 99px 50px;
+}
+
+#screenpad1:hover {
+  transform: scale(1.2);
+}
+
+#headname {
+  font-family: "Abril Fatface", sans-serif;
+  color: #039402;
+}
+
+#used {
+  font-family: "Abril Fatface", sans-serif;
+  font-size: 8px;
+  color: #999;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 5px auto;
+}
+
+.quotes {
+  width: 60%;
+  margin: 100px auto 0 auto;
+  padding: 60px 10px;
+  box-sizing: border-box;
+  background: #252d20e3;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+}
+
+.sayings {
+  text-align: center;
+}
+
+#imagequotes {
+  text-align: center;
+}
+
+h2 {
+  font-family: "Abril Fatface", sans-serif;
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  margin: 20px auto;
+  font-weight: lighter;
+  display: none;
+  text-transform: capitalize;
+}
+
+h2:first-of-type {
+  display: block;
+}
+
+.sayings strong {
+  font-family: "lato", sans-serif;
+  font-size: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.overlay {
+  background: rgba(4, 0, 0, 0.6);
+  min-height: 100%;
+}
+
+.details {
+  background-image: url(pexels-photo-807598.jpg);
+  background-size: cover;
+  -ms-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.canvaspic {
+  text-align: center;
+}
+#tip2 {
+  font-family: "Abril Fatface", sans-serif;
+  font-size: 10px;
+  color: white;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 15px;
+}
+
+#canvas {
+  background: white;
+  margin: 0px auto;
+  padding: 15px 0 35px 0;
+  width: auto;
+  height: 0;
+  overflow: hidden;
+  transition: height 1s ease-in-out, background-color 1s ease-in-out;
+}
+
+#canvas.show {
+  height: 400px;
+  background: #252d20e3;
+  transition: height 1s ease-in-out , background-color 1s ease-in-out;
+  -ms-transition: height 1s ease-in-out,background-color 1s ease-in-out;
+  -moz-transition: height 1s ease-in-out,background-color 1s ease-in-out;
+  -webkit-transition: height 1s ease-in-out,background-color 1s ease-in-out;
+}
+
+.designpics {
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px 50px 20px 50px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-column-gap: 2em;
+  grid-row-gap: 5em;
+}
+
+#Ldesigns {
+  width: 120px;
+  margin: 40px auto;
+  border: 0.5px solid white;
+  text-align: center;
+  background: white;
+}
+
+#Ldesigns a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  font-family: "Abril Fatface", sans-serif;
+  font-size: 10px;
+  color: #252d20e3;
+}
+
+#Ldesigns:hover {
+  transition: all 0.5s ease-in-out;
+  background: transparent;
+}
+
+#Ldesigns a:hover {
+  transition: all 0.5s ease-in-out;
+  color: white;
+}
+
+#arrowbox {
+  background: white;
+  width: 60%;
+  padding: 25px 0;
+  margin: 0 auto;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: background-color 1s ease-in-out;
+}
+#arrowbox.active{
+  background: #252d20e3;
+  transition: background-color 1s ease-in-out;
+  -ms-transition: background-color 1s ease-in-out;
+  -moz-transition: background-color 1s ease-in-out;
+  -webkit-transition: background-color 1s ease-in-out;
+}
+
+#openarrow {
+  width: 15px;
+  height: 15px;
+  box-shadow: 2px 2px 0 #252d20e3;
+  transform: rotate(45deg);
+  text-align: center;
+  margin: -18px auto;
+  cursor: pointer;
+  transition: background-color 1s ease-in-out;
+}
+#openarrow.change {
+  box-shadow: 2px 2px 0 white;
+  transition: background-color 1s ease-in-out;
+  -ms-transition: background-color 1s ease-in-out;
+  -moz-transition: background-color 1s ease-in-out;
+  -webkit-transition: background-color 1s ease-in-out;
+}
+
+h4 {
+  font-family: "elephant", sans-serif;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+#icons img {
+  transition: 0.5s ease-in-out;
+}
+
+#icons img:hover {
+  transform: scale(1.5) rotate(360deg);
+}
+
+#icons {
+  text-align: center;
+}
+
+#mydeeds {
+  display: grid;
+  width: 90%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 7em;
+  margin: 0 auto;
+  background: #252d20e3;
+  padding: 40px 50px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-sizing: border-box;
+}
+
+.ido {
+  text-align: center;
+  margin: 0 auto;
+}
+
+article {
+  text-align: center;
+  margin: 20px auto 0 auto;
+  font-family: "Abril Fatface", sans-serif;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+#heading {
+  font-family: "Abril Fatface", sans-serif;
+  font-size: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#footerlinks li {
+  display: inline-block;
+  margin: 0 15px;
+  text-align: center;
+}
+
+#footerlinks img {
+  transition: transform 0.3s ease-in-out;
+}
+
+#footerlinks img:hover {
+  transform: scale(1.2);
+}
+
+.contactme {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer {
+  background: #252d20e3;
+}
+
+#footerlinks {
+  flex-grow: 1;
+  margin: 0 auto;
+  text-align: center;
+  padding: 80px 0;
+  box-sizing: border-box;
+}
+
+#footerlocation {
+  font-family: "Abril Fatface", sans-serif;
+  font-size: 10px;
+  color: white;
+  text-align: center;
+  flex-grow: 1;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+
+#footerlocation li {
+  margin: 15px 0;
+}
+
+footer {
+  font-family: "Abril Fatface", sans-serif;
+  font-size: 9px;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+
+/* End of Code */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media Queries */
+
+@media screen and (max-width: 320px) {
+
+
+  #header {
+    font-family: "six caps", sans-serif;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+  }
+
+  #wrapper {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  #myname {
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin: 50px auto;
+    font-weight: lighter;
+  }
+
+  h3 {
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 8px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px auto 0 auto;
+    font-weight: lighter;
+  }
+
+  blockquote {
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin: 20px auto;
+    text-transform: uppercase;
+    font-weight: 300;
+    opacity: 0;
+  }
+
+  #content2 {
+    width: auto;
+    height: 150px;
+    overflow-y: hidden;
+    transition: height 0.5s ease-in-out;
+    -ms-transition: height 0.5s ease-in-out;
+    -moz-transition: height 0.5s ease-in-out;
+    -webkit-transition: height 0.5s ease-in-out;
+  }
+
+  #button {
+    width: 100px;
+    height: auto;
+    display: block;
+    padding: 8px 0;
+    font-family: "century gothic", sans-serif;
+    font-size: 10px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    text-align: center;
+    border-radius: 2px;
+    border: 0.5px solid white;
+    border-top: none;
+    border-bottom: none;
+    transition: margin 0.5s ease-in-out 0s;
+    display: none;
+  }
+
+  #content3 {
+    margin-top: 5px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 90%;
+    opacity: 0.8;
+    transition: margin 0.4s ease-in-out 0s;
+    display: none;
+  }
+
+  p {
+    font-family: "century gothic", sans-serif;
+    font-size: 10px;
+    color: #ccc;
+    text-align: center;
+    margin: 10px auto 0 auto;
+    width: 80%;
+    text-transform: capitalize;
+  }
+
+  .content4 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 50px 0;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .grid1 {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+
+  .grid2 {
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  #screenpad a {
+    display: block;
+    padding: 53px 50px;
+  }
+
+  .contactme {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  .footer {
+    background: #252d20e3;
+  }
+
+  #mywork {
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 15px;
+    color: #02c400;
+    font-weight: 300;
+    text-align: center;
+    padding: 20px 0 0 0;
+  }
+
+  #tip {
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 9px;
+    color: #999;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .quotes {
+    width: auto;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    display: none;
+  }
+
+  #canvas {
+    background: #252d20e3;
+    margin: 0px auto;
+    padding: 30px 0;
+    width: 80%;
+    height: 0;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: none;
+  }
+
+  #arrowbox {
+    background: #252d20e3;
+    width: 80%;
+    padding: 15px 0;
+    margin: 0 auto;
+    display: none;
+  }
+
+  #mydeeds {
+    margin: 0 auto;
+    background: #291510;
+    display: grid;
+    padding: 0;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 3em;
+    width: auto;
+  }
+
+  .ido {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 30px;
+    border-radius: 0px;
+    background: #252d20;
+  }
+
+  .overlay {
+    background: none;
+  }
+
+  article {
+    text-align: center;
+    margin: 20px auto;
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+  }
+
+  #heading {
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  #footerlinks {
+    flex-grow: 1;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 0;
+    box-sizing: border-box;
+    max-width: 300px;
+  }
+
+  #footerlocation {
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 11px;
+    color: white;
+    text-align: center;
+    flex-grow: 1;
+    padding: 0 0 20px 0;
+    box-sizing: border-box;
+  }
+
+  #footerlocation li {
+    margin: 15px 0;
+  }
+
+  footer {
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 9px;
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) and (min-width: 321px) {
+
+
+  #header {
+    font-family: "six caps", sans-serif;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  #wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  #myname {
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin: 50px auto;
+    font-weight: lighter;
+  }
+
+  h3 {
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px auto 0 auto;
+    font-weight: lighter;
+  }
+
+  #content2 {
+    width: auto;
+    height: 150px;
+    overflow-y: hidden;
+    transition: height 0.5s ease-in-out;
+    -ms-transition: height 0.5s ease-in-out;
+    -moz-transition: height 0.5s ease-in-out;
+    -webkit-transition: height 0.5s ease-in-out;
+  }
+
+  #button {
+    width: 100px;
+    height: auto;
+    display: block;
+    padding: 8px 0;
+    font-family: "century gothic", sans-serif;
+    font-size: 10px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    text-align: center;
+    border-radius: 2px;
+    border: 0.5px solid white;
+    border-top: none;
+    border-bottom: none;
+    transition: margin 0.5s ease-in-out 0s;
+    display: none;
+  }
+
+  #content3 {
+    margin-top: 5px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 90%;
+    opacity: 0.8;
+    transition: margin 0.4s ease-in-out 0s;
+    display: none;
+  }
+
+  p {
+    font-family: "century gothic", sans-serif;
+    font-size: 10px;
+    color: #ccc;
+    text-align: center;
+    margin: 10px auto 0 auto;
+    width: 90%;
+    text-transform: capitalize;
+  }
+
+  .content4 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 50px 0;
+    width: 65%;
+    margin: 0 auto;
+  }
+
+  .grid1 {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+
+  .grid2 {
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  #screenpad a {
+    display: block;
+    padding: 75px 50px;
+  }
+
+  #mywork {
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 15px;
+    color: #02c400;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  #tip {
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 9px;
+    color: #999;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .quotes {
+    width: auto;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    display: none;
+  }
+
+  #canvas {
+    background: #252d20e3;
+    margin: 0px auto;
+    padding: 30px 0;
+    width: 80%;
+    height: 0;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+    display: none;
+  }
+
+  #arrowbox {
+    background: #252d20e3;
+    width: 80%;
+    padding: 15px 0;
+    margin: 0 auto;
+    display: none;
+  }
+
+  #mydeeds {
+    margin: 0 auto;
+    background: #252d20;
+    display: grid;
+    padding: 0;
+    grid-template-columns: repeat(1, 1fr);
+    width: auto;
+  }
+
+  .ido {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 60px;
+    border-radius: 0;
+    background: #252d20;
+  }
+
+  article {
+    text-align: center;
+    margin: 20px auto;
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+  }
+
+  #heading {
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  #footerlinks {
+    flex-grow: 1;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 0;
+    box-sizing: border-box;
+    min-width: 400px;
+  }
+
+  #footerlocation {
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 11px;
+    color: white;
+    text-align: center;
+    flex-grow: 1;
+    padding: 0 0 10px 0;
+    box-sizing: border-box;
+  }
+
+  #footerlocation li {
+    margin: 15px 0;
+  }
+
+  footer {
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 9px;
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 600px) {
+
+
+
+  #header {
+    font-family: "six caps", sans-serif;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  #wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  #myname {
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 33px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin: 50px auto;
+    font-weight: lighter;
+  }
+
+  h3 {
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px auto 0 auto;
+    font-weight: lighter;
+  }
+
+  #content2 {
+    width: auto;
+    height: 150px;
+    overflow-y: hidden;
+    transition: height 0.5s ease-in-out;
+    -ms-transition: height 0.5s ease-in-out;
+    -moz-transition: height 0.5s ease-in-out;
+    -webkit-transition: height 0.5s ease-in-out;
+  }
+
+  #button {
+    width: 100px;
+    height: auto;
+    display: block;
+    padding: 8px 0;
+    font-family: "century gothic", sans-serif;
+    font-size: 10px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    text-align: center;
+    border-radius: 2px;
+    border: 0.5px solid white;
+    border-top: none;
+    border-bottom: none;
+    transition: margin 0.5s ease-in-out 0s;
+    display: none;
+  }
+
+  #content3 {
+    margin-top: 5px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 90%;
+    opacity: 0.8;
+    transition: margin 0.4s ease-in-out 0s;
+    display: none;
+  }
+
+  p {
+    font-family: "century gothic", sans-serif;
+    font-size: 10px;
+    color: #ccc;
+    text-align: center;
+    margin: 10px auto 0 auto;
+    width: 85%;
+    text-transform: capitalize;
+  }
+
+  .content4 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 50px 0;
+    width: 65%;
+    margin: 0 auto;
+  }
+
+  .grid1 {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+
+  .grid2 {
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .grid3 {
+    display: none;
+  }
+  .grid4 {
+    display: none;
+  }
+
+  #screenpad a {
+    display: block;
+    padding: 75px 50px;
+  }
+
+  #canvas {
+    background: #252d20e3;
+    margin: 0px auto;
+    padding: 30px 0;
+    width: 80%;
+    height: 0;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: none;
+  }
+
+  #arrowbox {
+    background: #252d20e3;
+    width: 80%;
+    padding: 15px 0;
+    margin: 0 auto;
+    display: none;
+  }
+
+  #mywork {
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 15px;
+    color: #02c400;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  #tip {
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 9px;
+    color: #999;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .quotes {
+    width: auto;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    display: none;
+
+  }
+
+  #mydeeds {
+    margin: 0 auto;
+    background: #252d20;
+    display: grid;
+    padding: 0;
+    grid-template-columns: repeat(1, 1fr);
+    width: auto;
+  }
+
+  .ido {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 150px;
+    border-radius: 0;
+    background: #252d20;
+  }
+
+  article {
+    text-align: center;
+    margin: 20px auto;
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+  }
+
+  #heading {
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  #footerlinks {
+    flex-grow: 1;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 0;
+    box-sizing: border-box;
+    min-width: 600px;
+  }
+
+  #footerlocation {
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 11px;
+    color: white;
+    text-align: center;
+    flex-grow: 1;
+    padding: 0 0 10px 0;
+    box-sizing: border-box;
+  }
+
+  #footerlocation li {
+    margin: 15px 0;
+  }
+
+  footer {
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 9px;
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+
+
+
+  #header {
+    font-family: "six caps", sans-serif;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  #wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  #myname {
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 45px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin: 50px auto;
+    font-weight: lighter;
+  }
+
+  h3 {
+    font-family: "Abril Fatface", sans-serif;
+    font-size: 11px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px auto 0 auto;
+    font-weight: lighter;
+  }
+
+  blockquote {
+    font-family: "cataclysmo", sans-serif;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin: 30px auto;
+    text-transform: capitalize;
+    font-weight: 300;
+    opacity: 0;
+  }
+
+  #content2 {
+    width: auto;
+    height: 150px;
+    overflow-y: hidden;
+    transition: height 0.5s ease-in-out;
+    -ms-transition: height 0.5s ease-in-out;
+    -moz-transition: height 0.5s ease-in-out;
+    -webkit-transition: height 0.5s ease-in-out;
+  }
+
+  #button {
+    width: 100px;
+    height: auto;
+    display: block;
+    padding: 8px 0;
+    font-family: "century gothic", sans-serif;
+    font-size: 10px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    text-align: center;
+    border-radius: 2px;
+    border: 0.5px solid white;
+    border-top: none;
+    border-bottom: none;
+    transition: margin 0.5s ease-in-out 0s;
+    display: none;
+  }
+
+  #content3 {
+    margin-top: 5px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 90%;
+    opacity: 0.8;
+    transition: margin 0.4s ease-in-out 0s;
+    display: none;
+  }
+
+  p {
+    font-family: "century gothic", sans-serif;
+    font-size: 11px;
+    color: #ccc;
+    text-align: center;
+    margin: 10px auto 0 auto;
+    width: 70%;
+    text-transform: capitalize;
+  }
+
+}
